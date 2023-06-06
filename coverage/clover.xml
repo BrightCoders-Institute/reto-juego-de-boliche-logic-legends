@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686012041672" clover="3.2.0">
-  <project timestamp="1686012041672" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+<coverage generated="1686014096664" clover="3.2.0">
+  <project timestamp="1686014096665" name="All files">
+    <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3" elements="19" coveredelements="10" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
     <file name="bowling.ts" path="C:\Users\aanto\OneDrive\Documentos\BrightCoders\reto-juego-de-boliche-logic-legends\bowling.ts">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
+      <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="19" count="4" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>
