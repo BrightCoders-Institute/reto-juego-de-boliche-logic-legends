@@ -40,4 +40,4 @@ Score Code climate:
 
 Score Code Codacy:
 
-![Score Codacy]('./img/')
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5d3792e3fd5346c3a8bb0dac462e7550)](https://app.codacy.com/gh/BrightCoders-Institute/reto-juego-de-boliche-logic-legends/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
