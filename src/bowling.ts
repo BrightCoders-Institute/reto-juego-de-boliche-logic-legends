@@ -1,12 +1,8 @@
 export default class BowlingGame {
   frames: number[][];
   currentFrame: number[];
-  //lastFrame: number[];
   totalScore: number;
 
-  // frames [ [1,4], [5,4], [3,3] ] 
-  // currentFrame[ 3, 4 ]
-  // lastFrame [3,2]
 
   constructor() {
     this.frames = [];
@@ -19,11 +15,11 @@ export default class BowlingGame {
     return Math.floor(Math.random() * (11 - this.currentFrame[0]));
   }
 
-  spare(bonus: number){
-    this.totalScore+= bonus;
+  spare(){
+    return this.currentFrame[0];
   }
-  strike(bonus: number){ 
-    this.totalScore+= bonus;
+  sumFrame(frameNumber: number){
+    return this.frames[frameNumber][0] + this.frames[frameNumber][1];
   }
 
   createFrame(frameNumber: number){
