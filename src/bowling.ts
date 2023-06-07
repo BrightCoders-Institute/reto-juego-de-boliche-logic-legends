@@ -6,13 +6,13 @@ export default class BowlingGame {
 
   constructor() {
     this.frames = [];
-    this.currentFrame = [0,0];
+    this.currentFrame = [];
     this.totalScore = 0;
 
   }
 
-  shot() {
-    return Math.floor(Math.random() * (11 - this.currentFrame[0]));
+  static shot(prevShot: number) {
+    return Math.floor(Math.random() * (11 - prevShot));
   }
 
   spare(){
@@ -22,10 +22,20 @@ export default class BowlingGame {
     return this.frames[frameNumber][0] + this.frames[frameNumber][1];
   }
 
+  Bonus(frameNumber: number){
+    if (frameNumber === 0 ) return;
+    if (this.frames[frameNumber - 1 ][0] === 10){
+      this.frames[frameNumber-1][2] = this.sumFrame(frameNumber);
+    }
+    else if(this.sumFrame(frameNumber-1) === 10){
+      this.frames[frameNumber-1][2] = this.spare();
+    }
+  }
+
   createFrame(frameNumber: number){
-    this.currentFrame = [0,0];
-    this.currentFrame[0] = this.shot();
-    this.currentFrame[1] = this.shot();
+    this.currentFrame = [0,0,0];
+    this.currentFrame[0] = BowlingGame.shot(0);
+    this.currentFrame[1] = BowlingGame.shot(this.currentFrame[0]);
     this.frames[frameNumber] = this.currentFrame; 
   }
 
