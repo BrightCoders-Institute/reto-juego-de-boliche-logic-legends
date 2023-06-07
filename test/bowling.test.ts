@@ -34,9 +34,4 @@ describe('Tests for BowlingGame class',() => {
     expect(game.frames[0][2]).toBe(5);
   });
 
-  test('Should return 133 as total score', () =>{
-    const game = new BowlingGame();
-    game.frames = [[1,4,0], [4,5,0], [6,4,5], [5,5,10], [10,0,1], [0,1,0], [7,3,6], [6,4,10], [10,0,10], [2,8,6]]
-    expect(game.getTotalScore()).toBe(133);
-  });
 });

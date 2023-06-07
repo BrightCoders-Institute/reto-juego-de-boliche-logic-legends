@@ -19,8 +19,9 @@ This is a TypeScript implementation of the game of Bowling. The code consists of
 - Clone the repository or download the source code files.
 - Make sure you have TypeScript installed globally on your machine.
 - Open a terminal or command prompt and navigate to the root directory of the project.
+- Execute `npm install` to install all libraries 
 - Run the command tsc to compile the TypeScript files into JavaScript.
-- After successful compilation, you can run the game using Node.js by executing the command `node dist/index.js`.
+- After successful compilation, you can run the game using Node.js by executing the command `node dist/index.js` or `npm run dev`
 
 ## Usage
 When you execute the command node dist/index.js, the class 'BowlingGame' calls the methods and properties to play  game of bowling. You will see in the console the number of pines downed every shoot for frame, and the final score at the end.
@@ -32,3 +33,11 @@ When you execute the command node dist/index.js, the class 'BowlingGame' calls t
 - [BrandonVG](brandon.vadillox3@gmail.com)
 
 ## Badges
+
+Score Code climate:
+
+![Score CodeClimate](img/codeclimate.png)
+
+Score Code Codacy:
+
+![Score Codacy]('./img/')

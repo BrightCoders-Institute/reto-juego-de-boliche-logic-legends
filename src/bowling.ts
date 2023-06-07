@@ -21,15 +21,12 @@ export default class BowlingGame {
     return this.frames[frameNumber][0] + this.frames[frameNumber][1];
   }
 
-  frameScore(frameNumber:number){
+  frameScore(frameNumber: number){
     return this.frames[frameNumber][0] + this.frames[frameNumber][1] +  this.frames[frameNumber][2];
   }
 
-  getTotalScore(){
-    this.totalScore=0;
-    for (let i = 0; i < this.frames.length; i++) {
-      this.totalScore+= this.frameScore(i);
-    }
+  getTotalScore(index: number){
+    this.totalScore+= this.frameScore(index);
     return this.totalScore;
   }
   
@@ -45,17 +42,14 @@ export default class BowlingGame {
   }
 
   validateFinalFrame(){
-    switch( this.frames[9][0] ){
-      case 10:
-        break;
-      default:  
-
-    }
+    if (this.sumFrame(9) !== 10) return;
     if (this.frames[9][0] === 10){
-      this.frames[9] = [this.frames[9][0],BowlingGame.shot(0),BowlingGame.shot(0)]
+      this.frames[9][1] = BowlingGame.shot(0);
+      this.frames[9][2] = BowlingGame.shot(0);
     }
-
-
+    else{
+      this.frames[9][2] = BowlingGame.shot(0);
+    }
   }
 
   createFrame(frameNumber: number){
@@ -75,8 +69,9 @@ export default class BowlingGame {
   
   printFrames(){
     for (let i = 0; i < this.frames.length; i++) {
-      console.log(this.frames[i][0],"--", this.frames[i][1]);
+      console.log(`${this.frames[i][0]} -- ${this.frames[i][1]} -- ${this.frames[i][2]} score: ${this.getTotalScore(i)}`);
       console.log("-----------------------------");      
     }
+    console.log(`Your final score is: ${this.totalScore}`);
   }
 }
