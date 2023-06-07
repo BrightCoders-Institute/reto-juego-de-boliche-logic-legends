@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.57% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/35</span>
+                <span class='fraction'>15/35</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">72.72% </span>
+                <span class="strong">54.54% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/11</span>
+                <span class='fraction'>6/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.83% </span>
+                <span class="strong">48.38% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/31</span>
+                <span class='fraction'>15/31</span>
             </div>
         
             
@@ -140,15 +140,20 @@
 <a name='L75'></a><a href='#L75'>75</a>
 <a name='L76'></a><a href='#L76'>76</a>
 <a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,20 +169,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -188,7 +195,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,6 +218,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -224,7 +234,7 @@
 &nbsp;
   constructor() {
     this.frames = [];
-    this.currentFrame = [0,0];
+    this.currentFrame = [0, 0];
     this.totalScore = 0;
   }
 &nbsp;
@@ -232,64 +242,69 @@
     return Math.floor(Math.random() * (11 - prevShot));
   }
 &nbsp;
-  spare(){
+  spare() {
     return this.currentFrame[0];
   }
 &nbsp;
-  sumFrame(frameNumber: number){
+  sumFrame(frameNumber: number) {
     return this.frames[frameNumber][0] + this.frames[frameNumber][1];
   }
 &nbsp;
-  frameScore(frameNumber:number){
-    return this.frames[frameNumber][0] + this.frames[frameNumber][1] +  this.frames[frameNumber][2];
+<span class="fstat-no" title="function not covered" >  fr</span>ameScore(frameNumber: number) {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      this.frames[frameNumber][0] +
+      this.frames[frameNumber][1] +
+      this.frames[frameNumber][2]
+    );
   }
 &nbsp;
-  getTotalScore(index: number){
-    this.totalScore+= this.frameScore(index);
+<span class="fstat-no" title="function not covered" >  ge</span>tTotalScore(index: number) {
+<span class="cstat-no" title="statement not covered" >    this.totalScore += this.frameScore(index);</span>
 <span class="cstat-no" title="statement not covered" >    return this.totalScore;</span>
   }
-  
 &nbsp;
-  Bonus(frameNumber: number){
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (frameNumber === 0 ) <span class="cstat-no" title="statement not covered" >return;</span>
-    if (this.frames[frameNumber - 1 ][0] === 10){
-      this.frames[frameNumber-1][2] = this.sumFrame(frameNumber);
-    }
-    else <span class="missing-if-branch" title="else path not taken" >E</span>if(this.sumFrame(frameNumber-1) === 10){
-      this.frames[frameNumber-1][2] = this.spare();
+  Bonus(frameNumber: number) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (frameNumber === 0) <span class="cstat-no" title="statement not covered" >return;</span>
+    if (this.frames[frameNumber - 1][0] === 10) {
+      this.frames[frameNumber - 1][2] = this.sumFrame(frameNumber);
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.sumFrame(frameNumber - 1) === 10) {
+      this.frames[frameNumber - 1][2] = this.spare();
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  va</span>lidateFinalFrame(){
+<span class="fstat-no" title="function not covered" >  va</span>lidateFinalFrame() {
 <span class="cstat-no" title="statement not covered" >    if (this.sumFrame(9) !== 10) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (this.frames[9][0] === 10){</span>
+<span class="cstat-no" title="statement not covered" >    if (this.frames[9][0] === 10) {</span>
 <span class="cstat-no" title="statement not covered" >      this.frames[9][1] = BowlingGame.shot(0);</span>
 <span class="cstat-no" title="statement not covered" >      this.frames[9][2] = BowlingGame.shot(0);</span>
-    }
-    else{
+    } else {
 <span class="cstat-no" title="statement not covered" >      this.frames[9][2] = BowlingGame.shot(0);</span>
     }
   }
 &nbsp;
-  createFrame(frameNumber: number){
-    this.currentFrame = [0,0,0];
+  createFrame(frameNumber: number) {
+    this.currentFrame = [0, 0, 0];
     this.currentFrame[0] = BowlingGame.shot(0);
     this.currentFrame[1] = BowlingGame.shot(this.currentFrame[0]);
-    this.frames[frameNumber] = this.currentFrame; 
+    this.frames[frameNumber] = this.currentFrame;
   }
-  
-<span class="fstat-no" title="function not covered" >  cr</span>eateFrames(){
+&nbsp;
+<span class="fstat-no" title="function not covered" >  cr</span>eateFrames() {
 <span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; 10; i++) {</span>
 <span class="cstat-no" title="statement not covered" >      this.createFrame(i);</span>
 <span class="cstat-no" title="statement not covered" >      this.Bonus(i);</span>
     }
 <span class="cstat-no" title="statement not covered" >    this.validateFinalFrame();</span>
   }
-  
-<span class="fstat-no" title="function not covered" >  pr</span>intFrames(){
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pr</span>intFrames() {
 <span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; this.frames.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      console.log(`${this.frames[i][0]} -- ${this.frames[i][1]} -- ${this.frames[i][2]} score: ${this.getTotalScore(i)}`);</span>
-<span class="cstat-no" title="statement not covered" >      console.log("-----------------------------");      </span>
+<span class="cstat-no" title="statement not covered" >      console.log(</span>
+        `${this.frames[i][0]} -- ${this.frames[i][1]} -- ${
+          this.frames[i][2]
+        } score: ${this.getTotalScore(i)}`
+      );
+<span class="cstat-no" title="statement not covered" >      console.log("-----------------------------");</span>
     }
 <span class="cstat-no" title="statement not covered" >    console.log(`Your final score is: ${this.totalScore}`);</span>
   }
@@ -301,7 +316,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-06-07T01:21:03.176Z
+                at 2023-06-07T02:00:53.248Z
             </div>
         <script src="prettify.js"></script>
         <script>
